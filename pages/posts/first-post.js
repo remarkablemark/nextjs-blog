@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function FirstPost() {
   return (
@@ -8,6 +9,14 @@ export default function FirstPost() {
       <Head>
         <title>First Post</title>
       </Head>
+
+      <Script
+        src="https://unpkg.com/github-corners/dist/embed.min.js"
+        strategy="lazyOnload"
+        onLoad={() => console.log('script loaded correctly')}
+        data-href="https://github.com/remarkablemark/nextjs-blog"
+        data-target="_blank"
+      />
 
       <h1>First Post</h1>
 
